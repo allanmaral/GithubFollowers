@@ -84,7 +84,10 @@ class SearchVC: UIViewController {
     }
     
     @objc private func pushFollowerListVC() {
-        guard isUsernameValid else { return }
+        guard isUsernameValid else {
+            presentAlert(title: "Invalid Username", message: "Please enter a valid username. We need to know who to look for 😀.", actionText: "OK!")
+            return
+        }
         
         let followerListVC = FollowerListVC()
         followerListVC.username = usernameTextField.text!
