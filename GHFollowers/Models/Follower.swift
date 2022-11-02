@@ -8,6 +8,6 @@
 import Foundation
 
 struct Follower {
-    var login: String
-    var avatarURL: String
+  var login: String
+  var avatarURL: String
 }

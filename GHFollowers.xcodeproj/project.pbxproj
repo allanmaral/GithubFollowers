@@ -23,6 +23,8 @@
 		9D8B606828DF53F20064148E /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8B606728DF53F20064148E /* FavoritesListVC.swift */; };
 		9D8B606A28DF95F20064148E /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8B606928DF95F20064148E /* GFButton.swift */; };
 		9D8B606C28DF98D00064148E /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8B606B28DF98D00064148E /* GFTextField.swift */; };
+		9DC12F442912F87F00AE0528 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9DC12F432912F87F00AE0528 /* .swiftlint.yml */; };
+		9DC12F472912FE1700AE0528 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC12F462912FE1700AE0528 /* UIImage+.swift */; };
 		9DD7A9C028FA53E1006F8B8A /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7A9BF28FA53E1006F8B8A /* Follower.swift */; };
 		9DD7A9C228FA544C006F8B8A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7A9C128FA544C006F8B8A /* User.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		9D8B606728DF53F20064148E /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		9D8B606928DF95F20064148E /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		9D8B606B28DF98D00064148E /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		9DC12F432912F87F00AE0528 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		9DC12F462912FE1700AE0528 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		9DD7A9BF28FA53E1006F8B8A /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		9DD7A9C128FA544C006F8B8A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +90,7 @@
 				9DD7A9B928FA4E0F006F8B8A /* Screens */,
 				9DD7A9BC28FA4EE2006F8B8A /* Support */,
 				9D8B605F28DF47140064148E /* Info.plist */,
+				9DC12F432912F87F00AE0528 /* .swiftlint.yml */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				9D41E60A28F746510029AECF /* UIViewController+Alert.swift */,
+				9DC12F462912FE1700AE0528 /* UIImage+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -161,6 +167,7 @@
 				9D8B604A28DF47130064148E /* Sources */,
 				9D8B604B28DF47130064148E /* Frameworks */,
 				9D8B604C28DF47130064148E /* Resources */,
+				9DC12F452912F8C100AE0528 /* Lint Sources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC12F442912F87F00AE0528 /* .swiftlint.yml in Resources */,
 				9D8B605E28DF47140064148E /* LaunchScreen.storyboard in Resources */,
 				9D8B605B28DF47140064148E /* Assets.xcassets in Resources */,
 				9D8B605928DF47130064148E /* Main.storyboard in Resources */,
@@ -216,6 +224,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9DC12F452912F8C100AE0528 /* Lint Sources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Lint Sources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint lint --fix --no-cache --config ./.swiftlint.yml && \\ \n    swiftlint lint --no-cache --config ./.swiftlint.yml\nelse\n    echo \"warning: SwiftLint not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D8B604A28DF47130064148E /* Sources */ = {
@@ -227,6 +257,7 @@
 				9D8B606828DF53F20064148E /* FavoritesListVC.swift in Sources */,
 				9D41E60B28F746510029AECF /* UIViewController+Alert.swift in Sources */,
 				9D8B606A28DF95F20064148E /* GFButton.swift in Sources */,
+				9DC12F472912FE1700AE0528 /* UIImage+.swift in Sources */,
 				9D8B606628DF53D00064148E /* SearchVC.swift in Sources */,
 				9DD7A9C028FA53E1006F8B8A /* Follower.swift in Sources */,
 				9D41E60928F72FD60029AECF /* GFAlertVC.swift in Sources */,
