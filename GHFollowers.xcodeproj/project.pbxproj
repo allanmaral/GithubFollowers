@@ -25,6 +25,8 @@
 		9D8B606C28DF98D00064148E /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8B606B28DF98D00064148E /* GFTextField.swift */; };
 		9DC12F442912F87F00AE0528 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9DC12F432912F87F00AE0528 /* .swiftlint.yml */; };
 		9DC12F472912FE1700AE0528 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC12F462912FE1700AE0528 /* UIImage+.swift */; };
+		9DC12F4A2913255600AE0528 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC12F492913255600AE0528 /* NetworkManager.swift */; };
+		9DC12F4D291333C900AE0528 /* GFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC12F4C291333C900AE0528 /* GFError.swift */; };
 		9DD7A9C028FA53E1006F8B8A /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7A9BF28FA53E1006F8B8A /* Follower.swift */; };
 		9DD7A9C228FA544C006F8B8A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7A9C128FA544C006F8B8A /* User.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,8 @@
 		9D8B606B28DF98D00064148E /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		9DC12F432912F87F00AE0528 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		9DC12F462912FE1700AE0528 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		9DC12F492913255600AE0528 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9DC12F4C291333C900AE0528 /* GFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFError.swift; sourceTree = "<group>"; };
 		9DD7A9BF28FA53E1006F8B8A /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		9DD7A9C128FA544C006F8B8A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +88,8 @@
 		9D8B605028DF47130064148E /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				9DC12F4B291333BB00AE0528 /* Utilities */,
+				9DC12F482913254A00AE0528 /* Managers */,
 				9DD7A9BE28FA53D4006F8B8A /* Models */,
 				9DD7A9BD28FA4F13006F8B8A /* Helpers */,
 				9DD7A9BA28FA4E45006F8B8A /* Custom Views */,
@@ -93,6 +99,22 @@
 				9DC12F432912F87F00AE0528 /* .swiftlint.yml */,
 			);
 			path = GHFollowers;
+			sourceTree = "<group>";
+		};
+		9DC12F482913254A00AE0528 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9DC12F492913255600AE0528 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9DC12F4B291333BB00AE0528 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9DC12F4C291333C900AE0528 /* GFError.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		9DD7A9B928FA4E0F006F8B8A /* Screens */ = {
@@ -256,12 +278,14 @@
 				9D8B606C28DF98D00064148E /* GFTextField.swift in Sources */,
 				9D8B606828DF53F20064148E /* FavoritesListVC.swift in Sources */,
 				9D41E60B28F746510029AECF /* UIViewController+Alert.swift in Sources */,
+				9DC12F4D291333C900AE0528 /* GFError.swift in Sources */,
 				9D8B606A28DF95F20064148E /* GFButton.swift in Sources */,
 				9DC12F472912FE1700AE0528 /* UIImage+.swift in Sources */,
 				9D8B606628DF53D00064148E /* SearchVC.swift in Sources */,
 				9DD7A9C028FA53E1006F8B8A /* Follower.swift in Sources */,
 				9D41E60928F72FD60029AECF /* GFAlertVC.swift in Sources */,
 				9DD7A9C228FA544C006F8B8A /* User.swift in Sources */,
+				9DC12F4A2913255600AE0528 /* NetworkManager.swift in Sources */,
 				9D41E60128F71B9F0029AECF /* FollowerListVC.swift in Sources */,
 				9D41E60D28F74B860029AECF /* GFDialogView.swift in Sources */,
 				9D41E60528F72CB20029AECF /* GFTitleLabel.swift in Sources */,
