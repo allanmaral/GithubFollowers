@@ -8,8 +8,8 @@
 import UIKit
 
 extension UIImage {
-  public static var appLogo: UIImage {
-    // swiftlint:disable:next force_unwrapping
-    return UIImage(named: "gh-logo")!
-  }
+    public static var appLogo: UIImage {
+        // swiftlint:disable:next force_unwrapping
+        return UIImage(named: "gh-logo")!
+    }
 }

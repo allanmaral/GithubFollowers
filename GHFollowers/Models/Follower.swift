@@ -8,11 +8,11 @@
 import Foundation
 
 struct Follower: Codable, Hashable {
-  var login: String
-  var avatarURL: String
+    var login: String
+    var avatarURL: String
 
-  enum CodingKeys: String, CodingKey {
-    case login = "login"
-    case avatarURL = "avatar_url"
-  }
+    enum CodingKeys: String, CodingKey {
+        case login = "login"
+        case avatarURL = "avatar_url"
+    }
 }

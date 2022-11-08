@@ -8,37 +8,37 @@
 import UIKit
 
 class GFTextField: UITextField {
-  override init(frame: CGRect) {
-    super.init(frame: frame)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
 
-    configure()
-  }
+        configure()
+    }
 
-  required init?(coder: NSCoder) {
-    super.init(coder: coder)
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
 
-    configure()
-  }
+        configure()
+    }
 
-  private func configure() {
-    translatesAutoresizingMaskIntoConstraints = false
+    private func configure() {
+        translatesAutoresizingMaskIntoConstraints = false
 
-    layer.cornerRadius = 10
-    layer.borderWidth = 2
-    layer.borderColor = UIColor.systemGray4.cgColor
+        layer.cornerRadius = 10
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.systemGray4.cgColor
 
-    textColor = .label
-    tintColor = .label
-    textAlignment = .center
-    font = .preferredFont(forTextStyle: .title2)
-    adjustsFontSizeToFitWidth = true
-    minimumFontSize = 12
+        textColor = .label
+        tintColor = .label
+        textAlignment = .center
+        font = .preferredFont(forTextStyle: .title2)
+        adjustsFontSizeToFitWidth = true
+        minimumFontSize = 12
 
-    backgroundColor = .tertiarySystemBackground
-    autocorrectionType = .no
-    returnKeyType = .go
-    autocapitalizationType = .none
+        backgroundColor = .tertiarySystemBackground
+        autocorrectionType = .no
+        returnKeyType = .go
+        autocapitalizationType = .none
 
-    placeholder = "Enter a username"
-  }
+        placeholder = "Enter a username"
+    }
 }

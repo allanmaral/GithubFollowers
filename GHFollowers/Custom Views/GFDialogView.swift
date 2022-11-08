@@ -8,23 +8,23 @@
 import UIKit
 
 final class GFDialogView: UIView {
-  override init(frame: CGRect) {
-    super.init(frame: frame)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
 
-    configure()
-  }
+        configure()
+    }
 
-  required init?(coder: NSCoder) {
-    super.init(coder: coder)
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
 
-    configure()
-  }
+        configure()
+    }
 
-  private func configure() {
-    backgroundColor = .systemBackground
-    layer.cornerRadius = 16
-    layer.borderWidth = 2
-    layer.borderColor = UIColor.white.cgColor
-    translatesAutoresizingMaskIntoConstraints = false
-  }
+    private func configure() {
+        backgroundColor = .systemBackground
+        layer.cornerRadius = 16
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.white.cgColor
+        translatesAutoresizingMaskIntoConstraints = false
+    }
 }
