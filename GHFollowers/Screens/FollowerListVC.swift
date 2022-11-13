@@ -65,6 +65,13 @@ class FollowerListVC: UIViewController {
                     self.hasMoreFollowers = false
                 }
                 self.followers.append(contentsOf: followers)
+                if self.followers.isEmpty {
+                    DispatchQueue.main.async {
+                        let message = "This user doesn't have any followers. Go follow them 😄."
+                        self.showEmptySateView(with: message, in: self.view)
+                    }
+                    return
+                }
                 self.updateData()
 
             case .failure(let error):
@@ -102,7 +109,7 @@ extension FollowerListVC: UICollectionViewDelegate {
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.size.height
 
-        if offsetY > contentHeight - height {
+        if offsetY > contentHeight - (3 * height) {
             guard hasMoreFollowers else { return }
             page += 1
             getFollowers(for: username, in: page)

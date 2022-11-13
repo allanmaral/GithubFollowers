@@ -12,4 +12,9 @@ extension UIImage {
         // swiftlint:disable:next force_unwrapping
         return UIImage(named: "gh-logo")!
     }
+
+    public static var emptyStateLogo: UIImage {
+        // swiftlint:disable:next force_unwrapping
+        return UIImage(named: "empty-state-logo")!
+    }
 }
