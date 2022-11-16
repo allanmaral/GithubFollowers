@@ -25,6 +25,8 @@ class UserInfoVC: UIViewController {
         view.backgroundColor = .systemBackground
 
         configureNavigation()
+
+        getUser()
     }
 
     private func configureNavigation() {
@@ -33,6 +35,20 @@ class UserInfoVC: UIViewController {
             target: self,
             action: #selector(dismissViewController))
         navigationItem.rightBarButtonItem = doneButton
+    }
+
+    private func getUser() {
+        NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
+            guard let self = self else { return }
+
+            switch result {
+            case .success(let user):
+                debugPrint(user)
+
+            case .failure(let error):
+                self.presentAlert(title: "Bad Stuff Happened", message: error.rawValue, actionText: "OK")
+            }
+        }
     }
 
     @objc private func dismissViewController() {
