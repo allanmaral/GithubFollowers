@@ -8,7 +8,7 @@
 import UIKit
 
 extension GFLabelStyle {
-    static func body(textAlignment: NSTextAlignment) -> GFLabelStyle {
+    static func body(textAlignment: NSTextAlignment = .left) -> GFLabelStyle {
         GFLabelStyle(
             textColor: .secondaryLabel,
             textAlignment: textAlignment,

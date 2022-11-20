@@ -17,4 +17,9 @@ extension UIImage {
         // swiftlint:disable:next force_unwrapping
         return UIImage(named: "empty-state-logo")!
     }
+
+    public static var locationSymbol: UIImage {
+        // swiftlint:disable:next force_unwrapping
+        return UIImage(systemName: "mappin.and.ellipse")!
+    }
 }

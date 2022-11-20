@@ -8,7 +8,7 @@
 import UIKit
 
 extension GFLabelStyle {
-    static func title(fontSize: CGFloat, textAlignment: NSTextAlignment) -> GFLabelStyle {
+    static func title(fontSize: CGFloat, textAlignment: NSTextAlignment = .left) -> GFLabelStyle {
         GFLabelStyle(
             textColor: .label,
             textAlignment: textAlignment,
