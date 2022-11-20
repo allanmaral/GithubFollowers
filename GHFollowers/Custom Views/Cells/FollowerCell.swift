@@ -11,7 +11,7 @@ final class FollowerCell: UICollectionViewCell {
     static let reuseID = String(describing: FollowerCell.self)
 
     let avatarImageView = GFAvatarImageView(frame: .zero)
-    let usernameLabel = GFTitleLabel(fontSize: 16, textAlignment: .center)
+    let usernameLabel = GFLabel(style: .title(fontSize: 16, textAlignment: .center))
     let padding: CGFloat = 8
 
     override init(frame: CGRect) {
