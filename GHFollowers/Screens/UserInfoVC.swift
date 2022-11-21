@@ -9,6 +9,11 @@ import UIKit
 
 class UserInfoVC: UIViewController {
     let headerView = UIView()
+    let itemViewOne = UIView()
+    let itemViewTwo = UIView()
+
+    let kPadding: CGFloat = 20
+    let kItemHeight: CGFloat = 140
 
     var username: String
 
@@ -24,25 +29,17 @@ class UserInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configure()
+        getUser()
+    }
+
+    private func configure() {
         view.backgroundColor = .systemBackground
 
         configureNavigation()
         configureHeader()
-
-        getUser()
-    }
-
-    private func configureHeader() {
-        view.addSubview(headerView)
-
-        headerView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 180)
-        ])
+        configureItemViewOne()
+        configureItemViewTwo()
     }
 
     private func configureNavigation() {
@@ -51,6 +48,49 @@ class UserInfoVC: UIViewController {
             target: self,
             action: #selector(dismissViewController))
         navigationItem.rightBarButtonItem = doneButton
+    }
+
+    private func configureHeader() {
+        view.addSubview(headerView)
+
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: kPadding),
+            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: kPadding),
+            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -kPadding),
+            headerView.heightAnchor.constraint(equalToConstant: 190)
+        ])
+    }
+
+    private func configureItemViewOne() {
+        view.addSubview(itemViewOne)
+
+        itemViewOne.translatesAutoresizingMaskIntoConstraints = false
+
+        itemViewOne.backgroundColor = .systemPink
+
+        NSLayoutConstraint.activate([
+            itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: kPadding),
+            itemViewOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: kPadding),
+            itemViewOne.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -kPadding),
+            itemViewOne.heightAnchor.constraint(equalToConstant: kItemHeight)
+        ])
+    }
+
+    private func configureItemViewTwo() {
+        view.addSubview(itemViewTwo)
+
+        itemViewTwo.translatesAutoresizingMaskIntoConstraints = false
+
+        itemViewTwo.backgroundColor = .systemBlue
+
+        NSLayoutConstraint.activate([
+            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: kPadding),
+            itemViewTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: kPadding),
+            itemViewTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -kPadding),
+            itemViewTwo.heightAnchor.constraint(equalToConstant: kItemHeight)
+        ])
     }
 
     private func getUser() {
