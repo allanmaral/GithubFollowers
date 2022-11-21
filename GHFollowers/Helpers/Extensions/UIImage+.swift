@@ -22,4 +22,24 @@ extension UIImage {
         // swiftlint:disable:next force_unwrapping
         return UIImage(systemName: "mappin.and.ellipse")!
     }
+
+    public static var folderSymbol: UIImage {
+        // swiftlint:disable:next force_unwrapping
+        return UIImage(systemName: "folder")!
+    }
+
+    public static var textAlignLeftSymbol: UIImage {
+        // swiftlint:disable:next force_unwrapping
+        return UIImage(systemName: "text.alignleft")!
+    }
+
+    public static var heartSymbol: UIImage {
+        // swiftlint:disable:next force_unwrapping
+        return UIImage(systemName: "heart")!
+    }
+
+    public static var personSymbol: UIImage {
+        // swiftlint:disable:next force_unwrapping
+        return UIImage(systemName: "person.2")!
+    }
 }

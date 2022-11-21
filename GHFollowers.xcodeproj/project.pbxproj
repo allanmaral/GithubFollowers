@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D32E462292B200B008B5A9A /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D32E461292B200A008B5A9A /* GFItemInfoView.swift */; };
 		9D41E60128F71B9F0029AECF /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41E60028F71B9F0029AECF /* FollowerListVC.swift */; };
 		9D41E60328F720110029AECF /* UsernameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41E60228F720110029AECF /* UsernameValidator.swift */; };
 		9D41E60528F72CB20029AECF /* GFLabel+Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41E60428F72CB20029AECF /* GFLabel+Title.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D32E461292B200A008B5A9A /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 		9D41E60028F71B9F0029AECF /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		9D41E60228F720110029AECF /* UsernameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameValidator.swift; sourceTree = "<group>"; };
 		9D41E60428F72CB20029AECF /* GFLabel+Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GFLabel+Title.swift"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				9D41E60C28F74B860029AECF /* GFDialogView.swift */,
 				9DF1D026291B2916000DFBD3 /* GFLoadingView.swift */,
 				9DBF0D0229205E8200730231 /* GFEmptyStateView.swift */,
+				9D32E461292B200A008B5A9A /* GFItemInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				9D41E60128F71B9F0029AECF /* FollowerListVC.swift in Sources */,
 				9D41E60D28F74B860029AECF /* GFDialogView.swift in Sources */,
 				9D41E60528F72CB20029AECF /* GFLabel+Title.swift in Sources */,
+				9D32E462292B200B008B5A9A /* GFItemInfoView.swift in Sources */,
 				9DF1D027291B2916000DFBD3 /* GFLoadingView.swift in Sources */,
 				9DC12F522913541A00AE0528 /* GFAvatarImageView.swift in Sources */,
 				9DEDB7F42929BEF500269429 /* GFLabel+SecondaryTitle.swift in Sources */,
