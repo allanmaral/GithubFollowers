@@ -10,7 +10,7 @@ import UIKit
 class SearchVC: UIViewController {
     let logoImageView = UIImageView()
     let usernameTextField = GFTextField()
-    let submitSearchButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
+    let submitSearchButton = GFButton(title: "Get Followers")
 
     var isUsernameValid: Bool {
         return UsernameValidator.validate(usernameTextField.text ?? "")

@@ -12,7 +12,6 @@ enum ItemInfoType {
 }
 
 class GFItemInfoView: UIView {
-
     let symbolImageView = UIImageView()
     let titleLabel = GFLabel(style: .title(fontSize: 14, textAlignment: .left))
     let countLabel = GFLabel(style: .title(fontSize: 14, textAlignment: .center))
@@ -38,14 +37,14 @@ class GFItemInfoView: UIView {
             titleLabel.text = "Public Gists"
 
         case .followers:
-            symbolImageView.image = .personSymbol
+            symbolImageView.image = .heartSymbol
             titleLabel.text = "Followers"
 
         case .following:
-            symbolImageView.image = .heartSymbol
+            symbolImageView.image = .personSymbol
             titleLabel.text = "Following"
         }
-        
+
         countLabel.text = String(count)
     }
 
@@ -91,5 +90,4 @@ class GFItemInfoView: UIView {
             countLabel.heightAnchor.constraint(equalToConstant: 18)
         ])
     }
-
 }

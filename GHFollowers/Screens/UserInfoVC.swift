@@ -68,8 +68,6 @@ class UserInfoVC: UIViewController {
 
         itemViewOne.translatesAutoresizingMaskIntoConstraints = false
 
-        itemViewOne.backgroundColor = .systemPink
-
         NSLayoutConstraint.activate([
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: kPadding),
             itemViewOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: kPadding),
@@ -82,8 +80,6 @@ class UserInfoVC: UIViewController {
         view.addSubview(itemViewTwo)
 
         itemViewTwo.translatesAutoresizingMaskIntoConstraints = false
-
-        itemViewTwo.backgroundColor = .systemBlue
 
         NSLayoutConstraint.activate([
             itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: kPadding),
@@ -101,6 +97,8 @@ class UserInfoVC: UIViewController {
             case .success(let user):
                 DispatchQueue.main.async {
                     self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
+                    self.add(childVC: GFRepoItemVC(user: user), to: self.itemViewOne)
+                    self.add(childVC: GFFollowerItemVC(user: user), to: self.itemViewTwo)
                 }
 
             case .failure(let error):

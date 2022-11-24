@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D2892F8292EFCEC0048CDA4 /* GFItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2892F7292EFCEC0048CDA4 /* GFItemInfoVC.swift */; };
+		9D2892FA292EFFE60048CDA4 /* GFRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2892F9292EFFE60048CDA4 /* GFRepoItemVC.swift */; };
+		9D2892FC292F03E40048CDA4 /* GFButton+Primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2892FB292F03E40048CDA4 /* GFButton+Primary.swift */; };
+		9D2892FE292F04B10048CDA4 /* GFButton+Destructive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2892FD292F04B10048CDA4 /* GFButton+Destructive.swift */; };
+		9D289300292F056A0048CDA4 /* GFButton+Purple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2892FF292F056A0048CDA4 /* GFButton+Purple.swift */; };
+		9D289302292F05CC0048CDA4 /* GFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D289301292F05CC0048CDA4 /* GFFollowerItemVC.swift */; };
 		9D32E462292B200B008B5A9A /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D32E461292B200A008B5A9A /* GFItemInfoView.swift */; };
 		9D41E60128F71B9F0029AECF /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41E60028F71B9F0029AECF /* FollowerListVC.swift */; };
 		9D41E60328F720110029AECF /* UsernameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41E60228F720110029AECF /* UsernameValidator.swift */; };
@@ -43,6 +49,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D2892F7292EFCEC0048CDA4 /* GFItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoVC.swift; sourceTree = "<group>"; };
+		9D2892F9292EFFE60048CDA4 /* GFRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemVC.swift; sourceTree = "<group>"; };
+		9D2892FB292F03E40048CDA4 /* GFButton+Primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GFButton+Primary.swift"; sourceTree = "<group>"; };
+		9D2892FD292F04B10048CDA4 /* GFButton+Destructive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GFButton+Destructive.swift"; sourceTree = "<group>"; };
+		9D2892FF292F056A0048CDA4 /* GFButton+Purple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GFButton+Purple.swift"; sourceTree = "<group>"; };
+		9D289301292F05CC0048CDA4 /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemVC.swift; sourceTree = "<group>"; };
 		9D32E461292B200A008B5A9A /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 		9D41E60028F71B9F0029AECF /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		9D41E60228F720110029AECF /* UsernameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameValidator.swift; sourceTree = "<group>"; };
@@ -91,6 +103,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D289303292F06320048CDA4 /* ItemInfoVCs */ = {
+			isa = PBXGroup;
+			children = (
+				9D2892F7292EFCEC0048CDA4 /* GFItemInfoVC.swift */,
+				9D2892F9292EFFE60048CDA4 /* GFRepoItemVC.swift */,
+				9D289301292F05CC0048CDA4 /* GFFollowerItemVC.swift */,
+			);
+			path = ItemInfoVCs;
+			sourceTree = "<group>";
+		};
 		9D8B604528DF47130064148E = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				9D8B606928DF95F20064148E /* GFButton.swift */,
+				9D2892FB292F03E40048CDA4 /* GFButton+Primary.swift */,
+				9D2892FD292F04B10048CDA4 /* GFButton+Destructive.swift */,
+				9D2892FF292F056A0048CDA4 /* GFButton+Purple.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -161,6 +186,7 @@
 		9DBF0D0029205C9E00730231 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9D289303292F06320048CDA4 /* ItemInfoVCs */,
 				9D41E60828F72FD60029AECF /* GFAlertVC.swift */,
 				9DEDB7F12929BEA000269429 /* GFUserInfoHeaderVC.swift */,
 			);
@@ -369,16 +395,20 @@
 				9DC12F50291352F900AE0528 /* FollowerCell.swift in Sources */,
 				9DC88F882923DFA300712BDB /* UserInfoVC.swift in Sources */,
 				9DEDB7F22929BEA000269429 /* GFUserInfoHeaderVC.swift in Sources */,
+				9D2892F8292EFCEC0048CDA4 /* GFItemInfoVC.swift in Sources */,
 				9D41E60B28F746510029AECF /* UIViewController+Alert.swift in Sources */,
 				9DC12F4D291333C900AE0528 /* GFError.swift in Sources */,
+				9D2892FC292F03E40048CDA4 /* GFButton+Primary.swift in Sources */,
 				9D8B606A28DF95F20064148E /* GFButton.swift in Sources */,
 				9DC12F472912FE1700AE0528 /* UIImage+.swift in Sources */,
 				9D8B606628DF53D00064148E /* SearchVC.swift in Sources */,
 				9DBF0D0329205E8200730231 /* GFEmptyStateView.swift in Sources */,
+				9D289300292F056A0048CDA4 /* GFButton+Purple.swift in Sources */,
 				9DD7A9C028FA53E1006F8B8A /* Follower.swift in Sources */,
 				9DF1D029291B44AD000DFBD3 /* UIViewController+Loading.swift in Sources */,
 				9D41E60928F72FD60029AECF /* GFAlertVC.swift in Sources */,
 				9DD7A9C228FA544C006F8B8A /* User.swift in Sources */,
+				9D2892FE292F04B10048CDA4 /* GFButton+Destructive.swift in Sources */,
 				9DC12F4A2913255600AE0528 /* NetworkManager.swift in Sources */,
 				9D41E60128F71B9F0029AECF /* FollowerListVC.swift in Sources */,
 				9D41E60D28F74B860029AECF /* GFDialogView.swift in Sources */,
@@ -388,10 +418,12 @@
 				9DC12F522913541A00AE0528 /* GFAvatarImageView.swift in Sources */,
 				9DEDB7F42929BEF500269429 /* GFLabel+SecondaryTitle.swift in Sources */,
 				9D8B605228DF47130064148E /* AppDelegate.swift in Sources */,
+				9D2892FA292EFFE60048CDA4 /* GFRepoItemVC.swift in Sources */,
 				9D8B605428DF47130064148E /* SceneDelegate.swift in Sources */,
 				9DEDB7F62929C5CE00269429 /* GFLabel.swift in Sources */,
 				9D41E60728F72E680029AECF /* GFLabel+Body.swift in Sources */,
 				9DC12F542913674E00AE0528 /* UIHelpers.swift in Sources */,
+				9D289302292F05CC0048CDA4 /* GFFollowerItemVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
