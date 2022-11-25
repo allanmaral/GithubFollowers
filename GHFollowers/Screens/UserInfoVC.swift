@@ -11,6 +11,7 @@ class UserInfoVC: UIViewController {
     let headerView = UIView()
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
+    let dateLabel = GFLabel(style: .body(textAlignment: .center))
 
     let kPadding: CGFloat = 20
     let kItemHeight: CGFloat = 140
@@ -40,6 +41,7 @@ class UserInfoVC: UIViewController {
         configureHeader()
         configureItemViewOne()
         configureItemViewTwo()
+        configureDateLabel()
     }
 
     private func configureNavigation() {
@@ -56,7 +58,7 @@ class UserInfoVC: UIViewController {
         headerView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: kPadding),
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: kPadding),
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -kPadding),
             headerView.heightAnchor.constraint(equalToConstant: 190)
@@ -89,6 +91,17 @@ class UserInfoVC: UIViewController {
         ])
     }
 
+    private func configureDateLabel() {
+        view.addSubview(dateLabel)
+
+        NSLayoutConstraint.activate([
+            dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: kPadding),
+            dateLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: kPadding),
+            dateLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -kPadding),
+            dateLabel.heightAnchor.constraint(equalToConstant: 18)
+        ])
+    }
+
     private func getUser() {
         NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
             guard let self = self else { return }
@@ -99,6 +112,9 @@ class UserInfoVC: UIViewController {
                     self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
                     self.add(childVC: GFRepoItemVC(user: user), to: self.itemViewOne)
                     self.add(childVC: GFFollowerItemVC(user: user), to: self.itemViewTwo)
+
+                    guard let createdAt = Date.from(string: user.createdAt)?.convertToMonthYearFormat() else { return }
+                    self.dateLabel.text = "Github since \(createdAt)"
                 }
 
             case .failure(let error):
