@@ -7,12 +7,20 @@
 
 import UIKit
 
+protocol FollowerListVCDelegate: AnyObject {
+    func didRequestFollower(for username: String)
+}
+
 class FollowerListVC: UIViewController {
     enum Section {
         case main
     }
 
-    var username: String?
+    var username: String? {
+        didSet {
+            title = username
+        }
+    }
     var unfilteredFollowers: [Follower] = []
     var followers: [Follower] = [] {
         didSet {
@@ -42,7 +50,6 @@ class FollowerListVC: UIViewController {
     }
 
     private func configureViewController() {
-        title = username
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .systemBackground
     }
@@ -134,7 +141,7 @@ extension FollowerListVC: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let follower = followers[indexPath.item]
-        let userInfoVC = UserInfoVC(username: follower.login)
+        let userInfoVC = UserInfoVC(username: follower.login, delegate: self)
         let navController = UINavigationController(rootViewController: userInfoVC)
 
         present(navController, animated: true)
@@ -152,5 +159,15 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         followers = unfilteredFollowers
+    }
+}
+
+extension FollowerListVC: FollowerListVCDelegate {
+    func didRequestFollower(for username: String) {
+        self.username = username
+        self.page = 1
+        unfilteredFollowers.removeAll()
+        followers.removeAll()
+        getFollowers(for: username, in: page)
     }
 }
