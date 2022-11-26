@@ -27,4 +27,8 @@ class GFFollowerItemVC: GFItemInfoVC {
     private func configureAction() {
         actionButton.set(title: "Get Followers", style: .primary)
     }
+
+    override func didTapAction() {
+        delegate?.didTapGetFollowers()
+    }
 }

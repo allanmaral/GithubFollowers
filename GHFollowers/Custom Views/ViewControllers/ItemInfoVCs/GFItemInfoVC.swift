@@ -16,9 +16,11 @@ class GFItemInfoVC: UIViewController {
     let kPadding: CGFloat = 20
 
     var user: User
+    weak var delegate: UserInfoVCDelegate?
 
-    required init(user: User) {
+    required init(user: User, delegate: UserInfoVCDelegate?) {
         self.user = user
+        self.delegate = delegate
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -65,6 +67,8 @@ class GFItemInfoVC: UIViewController {
     private func configureActionButton() {
         view.addSubview(actionButton)
 
+        actionButton.addTarget(self, action: #selector(didTapAction), for: .touchUpInside)
+
         NSLayoutConstraint.activate([
             actionButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -kPadding),
             actionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: kPadding),
@@ -72,4 +76,6 @@ class GFItemInfoVC: UIViewController {
             actionButton.heightAnchor.constraint(equalToConstant: 44)
         ])
     }
+
+    @objc func didTapAction() { }
 }
